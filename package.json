@@ -6,8 +6,9 @@
   "repository": "https://github.com/crisguitar/books-quito",
   "dependencies": {
     "karma": "^0.12.16",
-    "karma-chrome-launcher": "^0.1.4",
+    "karma-phantomjs-launcher": "~0.1",
     "karma-jasmine": "^0.1.5",
+    "karma-cli": "0.0.4",
     "protractor": "~1.0.0",
     "bower": "^1.3.1"
   }
