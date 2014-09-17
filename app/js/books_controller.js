@@ -5,8 +5,15 @@ angular.module('books_controller', [])
 		$scope.allBooks = booksFactory.allBooks;
 		$scope.newBook = {};
 		$scope.addNewBook = function(){
-			console.log($scope.allBooks);
 			$scope.allBooks.push($scope.newBook);
 			$scope.newBook = {};
-		}
+		};
+		$scope.borrowBook = function(bookName, user){
+			$scope.allBooks.forEach(function(element){
+				if (element.name === bookName) {
+					element.user = user;
+					return;
+				};
+			});
+		};
 	});

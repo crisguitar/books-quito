@@ -11,6 +11,11 @@ describe("Controller: Books", function() {
 		});
 	}));
 
+	afterEach(function(){
+		$scope.allBooks = [];
+		$scope.newBook = {};
+	});
+
 	it("should have a title", function() {
 		expect($scope.title).toBe('Book App');
 	});
@@ -36,10 +41,24 @@ describe("Controller: Books", function() {
 	});
 
 	it("should clear data after adding new book", function() {
-		addNewBook('Example', 'Example description', 'Example user');
+		addNewBook('Example book', 'Example description', 'Example user');
 		expect($scope.newBook.name).toBeUndefined();
 		expect($scope.newBook.description).toBeUndefined();
 		expect($scope.newBook.user).toBeUndefined();
+	});
+
+	it("should change user when borrowing book", function() {
+		addNewBook('Example book', 'Example description', 'Example user');
+		$scope.borrowBook('Example book', 'Cris');
+		expect($scope.allBooks[0].user).toBe('Cris');
+	});
+
+	it("should only change the user of the book that is being borrowed", function() {
+		addNewBook('Example book 1', 'Example description 1', '');
+		addNewBook('Example book 2', 'Example description 2', 'Example user');
+		$scope.borrowBook('Example book 2', 'Cris');
+		expect($scope.allBooks[0].user).toBe('');
+		expect($scope.allBooks[1].user).toBe('Cris');
 	});
 
 	function addNewBook (bookName, bookDescription, user) {
