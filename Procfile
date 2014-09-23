@@ -1,1 +1,1 @@
-“web: app/index.html”
+web: app/index.html
