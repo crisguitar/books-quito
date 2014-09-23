@@ -1,5 +1,5 @@
 "use strict";
-angular.module('books_controller', ['library_factory'])
+angular.module('library')
 .controller('books', function($scope, booksFactory){
 	$scope.allBooks = booksFactory.allBooks();
 	$scope.newBook = {};

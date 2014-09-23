@@ -1,5 +1,5 @@
 "use strict";
-angular.module('library_factory', ['firebase'])
+angular.module('library')
 .factory('booksFactory', ['$firebase', function($firebase){
 
 	var firebaseBooks = new Firebase("https://books-quito.firebaseio.com");

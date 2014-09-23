@@ -1,6 +1,6 @@
 "use strict";
 describe("Controller: Books", function() {
-	beforeEach(module('books_controller'));
+	beforeEach(module('library'));
 
 	var $scope;
 	var _booksFactory = {

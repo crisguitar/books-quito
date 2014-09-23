@@ -1,2 +1,2 @@
 "use strict";
-angular.module('library', ['books_controller', 'firebase']);
+angular.module('library', ['firebase']);
