@@ -1,4 +1,5 @@
 exports.config = {
+	seleniumServerJar: './node_modules/selenium-server-standalone-jar/jar/selenium-server-standalone-2.40.0.jar',
 	specs: [
 		'specs/functional/**/*.js'
 	],
