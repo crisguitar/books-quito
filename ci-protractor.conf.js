@@ -9,6 +9,6 @@ exports.config = {
 
 			'phantomjs.binary.path':'./node_modules/karma-phantomjs-launcher/node_modules/phantomjs/bin/phantomjs'
 		},
-	baseUrl: 'http://books-quito-test.herokuapp.com/app',
+	baseUrl: 'http://books-quito-test.herokuapp.com',
 	allScriptsTimeout: 30000
 };

@@ -5,6 +5,7 @@
   "description": "Application to track our books.",
   "repository": "https://github.com/crisguitar/books-quito",
   "dependencies": {
+    "http-server": "0.7.1",
     "karma": "^0.12.16",
     "karma-phantomjs-launcher": "~0.1",
     "karma-jasmine": "^0.1.5",
